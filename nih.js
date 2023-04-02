@@ -4,7 +4,7 @@ if (!q) return reply(`Example: $(prefix+command) email\n\nContoh ${prefix+comman
 
 // Buat transporter
 let transporter = nodemailer.createTransport({
-service: 'gmail
+service: 'gmail',
 auth: {
 user: 'helloiamkizakixd@gmail.com,
 pass: '-'
@@ -13,7 +13,7 @@ pass: '-'
 
  // Buat opsi email
 let mailOptions = {
-from: 'X-Zey Multi Device Verify'
+from: 'X-Zey Multi Device Verify',
 to: "${q}",
 subject: 'EMAIL VERIFY BOT WHATSAPP',
 text: `Halo \n\nTerimakasih, anda telah mendaftar di bot kami!\ntetap patuhi rules bot yah \n\nJangan berikan kode ini ke siapapun!!\n==========\nKode Verifikasi Anda: ${toDigit(kodeVerify)}\n=========\n\n© KiZakiXD`
